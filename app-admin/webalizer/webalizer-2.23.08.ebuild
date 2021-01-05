@@ -48,7 +48,7 @@ pkg_setup() {
 	if use nls && [[ -z "${LINGUAS}" ]]; then
 		ewarn "you must set LINGUAS in /etc/portage/make.conf"
 		ewarn "if you want to USE=nls"
-		die "please either set LINGUAS or do not use nls"
+		ewarn "please either set LINGUAS or do not use nls"
 	fi
 }
 
@@ -56,6 +56,7 @@ src_prepare() {
 	if use xtended; then
 		epatch "${WORKDIR}"/${PN}-${MY_PV}-${XTENDED_VER}-patch
 	fi
+	epatch "${FILESDIR}"/${P}-fno-common.patch
 }
 
 src_configure() {
