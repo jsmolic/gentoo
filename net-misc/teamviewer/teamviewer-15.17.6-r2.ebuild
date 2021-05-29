@@ -71,7 +71,7 @@ src_install() {
 
 	# No slotting here, binary expects this service path
 	newinitd "${FILESDIR}"/teamviewerd15.init teamviewerd
-	systemd_dounit tv_bin/script/teamviewerd.service
+	systemd_dounit "${FILESDIR}"/teamviewerd.service
 
 	insinto /usr/share/dbus-1/services
 	doins tv_bin/script/com.teamviewer.TeamViewer.service
