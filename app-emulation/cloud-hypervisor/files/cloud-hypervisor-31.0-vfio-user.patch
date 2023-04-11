@@ -1,0 +1,13 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index 5315917..f3dad19 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -18,7 +18,7 @@ serde = { version = "1.0.151", features = ["rc"] }
+ serde_derive = "1.0.149"
+ serde_json = "1.0.93"
+ thiserror = "1.0.38"
+-vfio-bindings = { git = "https://github.com/rust-vmm/vfio", branch = "main", features = ["fam-wrappers"] }
++vfio-bindings = { path = "../vfio-ea8f710464a24690ce109e6b7dfaa623dc518304/crates/vfio-bindings", features = ["fam-wrappers"] }
+ vm-memory = { version = "0.10.0", features = ["backend-mmap", "backend-atomic"] }
+ vmm-sys-util = "0.11.0"
+ 

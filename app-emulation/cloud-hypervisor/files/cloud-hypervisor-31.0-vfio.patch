@@ -1,0 +1,12 @@
+diff --git a/crates/vfio-ioctls/Cargo.toml b/crates/vfio-ioctls/Cargo.toml
+index 6d337b3..4cb235e 100644
+--- a/crates/vfio-ioctls/Cargo.toml
++++ b/crates/vfio-ioctls/Cargo.toml
+@@ -27,5 +27,5 @@ thiserror = "1.0"
+ vfio-bindings = { version = "0.4.0", path = "../vfio-bindings" }
+ vm-memory = { version = "0.10.0", features = ["backend-mmap"] }
+ vmm-sys-util = "0.11.0"
+-mshv-bindings = { git = "https://github.com/rust-vmm/mshv", branch = "main", features = ["with-serde", "fam-wrappers"], optional  = true }
+-mshv-ioctls = { git = "https://github.com/rust-vmm/mshv", branch = "main", optional  = true }
++mshv-bindings = { path ="../../../mshv-c1230f282c2836ba89ee112146bf638343424de8/mshv-bindings", features = ["with-serde", "fam-wrappers"], optional  = true }
++mshv-ioctls = { path = "../../../mshv-c1230f282c2836ba89ee112146bf638343424de8/mshv-ioctls", optional  = true }
