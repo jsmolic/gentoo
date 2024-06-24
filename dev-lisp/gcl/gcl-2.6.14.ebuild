@@ -26,6 +26,10 @@ DEPEND="${RDEPEND}
 	app-text/texi2html
 	>=dev-build/autoconf-2.52"
 
+PATCHES=(
+	"${FILESDIR}"/${P}-riscv.patch
+)
+
 src_configure() {
 	strip-flags
 	filter-flags -fstack-protector -fstack-protector-all
